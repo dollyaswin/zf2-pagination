@@ -29,6 +29,7 @@ return array(
         'template_path_stack' => array(
             'orchid' => __DIR__ . '/../view',
         ),
+        // pagination control view script
         'template_map' => array('pagination' => __DIR__ . '/../view/orchid/pagination.phtml')
     ),
 );
