@@ -1,7 +1,5 @@
 <?php
-namespace Api;
-
-use Api\Model\BookTable;
+namespace Orchid;
 
 class Module
 {
