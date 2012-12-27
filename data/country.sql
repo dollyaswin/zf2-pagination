@@ -1,0 +1,40 @@
+DROP TABLE IF EXISTS `country`;
+CREATE TABLE `country` (
+  `id` int(3) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(64) CHARACTER SET utf8 NOT NULL,
+  `currency` varchar(32) CHARACTER SET utf8 NOT NULL,
+  `currency_code` char(3) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+
+INSERT INTO `country` VALUES
+  (1,'Afghanistan','Afghani','AFN'),
+  (2,'Åland Islands','Euro','EUR'),
+  (3,'Albania','Lek','ALL'),
+  (4,'Algeria','Algerian Dinar','DZD'),
+  (5,'American Samoa','US Dollar','USD'),
+  (6,'Andorra','Euro','EUR'),
+  (7,'Angola','Kwanza','AOA'),
+  (8,'Anguilla','East Caribbean Dollar','XCD'),
+  (9,'Antarctica','No universal currency',''),
+  (10,'Antigua and Barbuda','East Caribbean Dollar','XCD'),
+  (11,'Argentina','Argentine Peso','ARS'),
+  (12,'Armenia','Armenian Dram','AMD'),
+  (13,'Aruba','Aruban Florin','AWG'),
+  (14,'Australia','Australian Dollar','AUD'),
+  (15,'Austria','Euro','EUR'),
+  (16,'Azerbaijan','Azerbaijanian Manat','AZN'),
+  (17,'Bahamas','Bahamian Dollar','BSD'),
+  (18,'Bahrain','Bahraini Dinar','BHD'),
+  (19,'Bangladesh','Taka','BDT'),
+  (20,'Barbados','Barbados Dollar','BBD'),
+  (21,'Belarus','Belarussian Ruble','BYR'),
+  (22,'Belgium','Euro','EUR'),
+  (23,'Belize','Belize Dollar','BZD'),
+  (24,'Benin','CFA Franc BCEAO †','XOF'),
+  (25,'Bermuda','Bermudian Dollar','BMD'),
+  (26,'Bhutan','Ngultrum','BTN'),
+  (27,'Bolivia, Plurinational State of','Boliviano','BOB'),
+  (28,'Bonaire, Sint Eustatius and Saba','US Dollar','USD'),
+  (29,'Bosnia and Herzegovina','Convertible Marks','BAM'),
+  (30,'Botswana','Pula','BWP');
