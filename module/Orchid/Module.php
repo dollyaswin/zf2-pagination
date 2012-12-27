@@ -1,6 +1,8 @@
 <?php
 namespace Orchid;
 
+use Orchid\Model\CountryTable;
+
 class Module
 {
     public function getAutoloaderConfig()
@@ -24,6 +26,15 @@ class Module
     
 	public function getServiceConfig()
     {
-        return array();
+        return array(
+            'factories' => array(
+        		// register CountryTable to service manager
+                'Orchid\Model\CountryTable' =>  function($sm) {
+                    $dbAdapter = $sm->get('Zend\Db\Adapter\Adapter');
+                    $table = new CountryTable($dbAdapter);
+                    return $table;
+                },
+            ),
+        );
     }
 }
