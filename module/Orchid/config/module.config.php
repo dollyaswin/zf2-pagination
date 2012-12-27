@@ -27,7 +27,8 @@ return array(
     ),
     'view_manager' => array(
         'template_path_stack' => array(
-            'api' => __DIR__ . '/../view',
+            'orchid' => __DIR__ . '/../view',
         ),
+        'template_map' => array('pagination' => __DIR__ . '/../view/orchid/pagination.phtml')
     ),
 );
