@@ -4,8 +4,7 @@ ZendSkeletonApplication
 Introduction
 ------------
 This is a simple, skeleton application using the ZF2 MVC layer and module
-systems. This application is meant to be used as a starting place for those
-looking to get their feet wet with ZF2.
+systems. This application is an example for Zend\Paginator usage
 
 
 Installation
@@ -17,15 +16,15 @@ The recommended way to get a working copy of this project is to clone the reposi
 and use composer to install dependencies:
 
     cd my/project/dir
-    git clone git://github.com/zendframework/ZendSkeletonApplication.git
-    cd ZendSkeletonApplication
+    git clone git://github.com/dollyaswin/zf2-pagination.git
+    cd zf2-pagination
     php composer.phar install
 
 Using Git submodules
 --------------------
 Alternatively, you can install using native git submodules:
 
-    git clone git://github.com/zendframework/ZendSkeletonApplication.git --recursive
+    git clone git://github.com/dollyaswin/zf2-pagination.git --recursive
 
 Virtual Host
 ------------
