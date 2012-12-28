@@ -11,10 +11,19 @@ class CountryController extends AbstractActionController
     public function findAction()
     {
     	$page = (int) $this->params()->fromRoute('page', 1);
-		$iteratorAdapter = new \Zend\Paginator\Adapter\Iterator(
-								$this->getCountryTable()->fetchAll()
-						   );
-		$paginator = new \Zend\Paginator\Paginator($iteratorAdapter);
+    	// compose select
+    	$dbSelect = $this->getCountryTable()
+    	                 ->getSql()
+    	                 ->select()
+    	                 ->columns(array('id', 'name', 'currency', 'currency_code'))
+    	                 ->order(array('id asc'));
+    	// use DbSelect Adapter by pass select object and DB Adapter
+    	// DbSelect use COUNT() to get row count
+    	$iteratorAdapter = new \Zend\Paginator\Adapter\DbSelect(
+    															 $dbSelect,
+    															 $this->getCountryTable()->getAdapter()
+    															);
+    	$paginator = new \Zend\Paginator\Paginator($iteratorAdapter);
 		$paginator->setCurrentPageNumber($page)
 		          ->setItemCountPerPage(20);
     	return new ViewModel(array('paginator' => $paginator));

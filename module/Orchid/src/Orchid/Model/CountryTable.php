@@ -18,12 +18,7 @@ class CountryTable extends AbstractTableGateway
 
     public function fetchAll()
     {
-        $resultSet = $this->select(function (\Zend\Db\Sql\Select $select) {
-        	$select->columns(array('id', 'name', 'currency', 'currency_code'))
-        	       ->order(array('id asc'));
-        });
-        $resultSet->buffer();
-        $resultSet->next();
+        $resultSet = $this->select();
         return $resultSet;
     }
 
