@@ -4,7 +4,7 @@
   <!-- Previous page link -->
   <?php if (isset($this->previous)): ?>
     <li>
-      <a href="<?php echo $this->url($this->route, array('page' => $this->previous)); ?>">&larr; Prev</a>
+      <a href="<?php echo $this->url($this->route, array('page' => $this->previous, 'type' => $this->type)); ?>">&larr; Prev</a>
     </li>
   <?php else: ?>
     <li class="disabled"><a>&larr; Prev</a></li>
@@ -14,7 +14,7 @@
   <?php foreach ($this->pagesInRange as $page): ?>
     <?php if ($page != $this->current): ?>
       <li>
-        <a href="<?php echo $this->url($this->route, array('page' => $page)); ?>">
+        <a href="<?php echo $this->url($this->route, array('page' => $page, 'type' => $this->type)); ?>">
           <?php echo $page; ?>
         </a>
       </li>
@@ -26,7 +26,7 @@
   <!-- Next page link -->
   <?php if (isset($this->next)): ?>
     <li>
-      <a href="<?php echo $this->url($this->route, array('page' => $this->next)); ?>">Next &rarr;</a>
+      <a href="<?php echo $this->url($this->route, array('page' => $this->next, 'type' => $this->type)); ?>">Next &rarr;</a>
     </li>
   <?php else: ?>
     <li class="disabled"><a>Next &rarr;</a></li>

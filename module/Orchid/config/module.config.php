@@ -12,9 +12,10 @@ return array(
             'locations' => array(
     			'type' => 'Segment', 
      			'options' => array(
-                    'route'    => '/find/locations[/:page]',
+                    'route'    => '/find[/:type][/:page]',
                     'constraints' => array(
                         'page'     => '[0-9]+',
+    					'type'     => '[a-zA-Z]+',
                     ),
                     'defaults' => array(
                         'controller' => 'Orchid\Controller\Country',

@@ -11,6 +11,7 @@ class CountryController extends AbstractActionController
     public function findAction()
     {
     	$page = (int) $this->params()->fromRoute('page', 1);
+    	$type = $this->params()->fromRoute('type', '');
     	// compose select
     	$dbSelect = $this->getCountryTable()
     	                 ->getSql()
@@ -26,7 +27,11 @@ class CountryController extends AbstractActionController
     	$paginator = new \Zend\Paginator\Paginator($iteratorAdapter);
 		$paginator->setCurrentPageNumber($page)
 		          ->setItemCountPerPage(20);
-    	return new ViewModel(array('paginator' => $paginator));
+    	return new ViewModel(array(
+    								 'paginator' => $paginator,
+    								 'type' => $type
+    								 )
+    							);
     }
 
     /**
