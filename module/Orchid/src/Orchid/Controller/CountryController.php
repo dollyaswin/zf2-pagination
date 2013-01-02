@@ -29,7 +29,8 @@ class CountryController extends AbstractActionController
 		          ->setItemCountPerPage(20);
     	return new ViewModel(array(
     								 'paginator' => $paginator,
-    								 'type' => $type
+    								 'type'  => $type,
+    								 'query' => $this->params()->fromQuery() 
     								 )
     							);
     }

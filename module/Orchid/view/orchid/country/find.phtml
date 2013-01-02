@@ -18,4 +18,5 @@
 <?php endif; ?>
 
 <!-- call pagination control view script  -->
-<?php echo $this->paginationControl($this->paginator, 'Elastic', 'pagination', array('route' => 'locations', 'type' => $this->type)); ?>
+<?php echo $this->paginationControl($this->paginator, 'Elastic', 'querypagination',
+                                     array('route' => 'locations', 'type' => $this->type, 'query' => $query)); ?>

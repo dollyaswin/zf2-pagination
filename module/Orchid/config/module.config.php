@@ -31,6 +31,8 @@ return array(
             'orchid' => __DIR__ . '/../view',
         ),
         // pagination control view script
-        'template_map' => array('pagination' => __DIR__ . '/../view/orchid/pagination.phtml')
+        'template_map' => array('pagination' => __DIR__ . '/../view/orchid/pagination.phtml',
+                                'querypagination' => __DIR__ . '/../view/orchid/querypagination.phtml'
+        						)
     ),
 );
